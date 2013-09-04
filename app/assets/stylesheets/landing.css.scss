@@ -1,0 +1,27 @@
+$nav-bar-color: #333333;
+div.navbar, div.navbar-inner, div.navbar-fixed-top {
+	background-color: $nav-bar-color !important;
+	background-image: none !important;
+	//line-height: 100px;
+	a {
+		color: #fff !important;
+	}
+}
+
+ul.nav {
+	line-height: 59px;
+	li {
+		line-height: 59px;
+		a {
+			text-shadow: none !important;
+			&:hover {
+				color: $main-color !important;
+			}
+		}
+		&.active {
+			a {
+				background-color: rgba(0,0,0,0) !important;
+			}
+		}
+	}
+}
