@@ -1,0 +1,22 @@
+<div id="login-container">
+<h1 class="sessions-header">Create an account:</h1>
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email, "E-mail:", :class => "input-box-label" %><br/>
+    <%= f.text_field :email, :class => "text-input-box" %>
+  </p>
+  <p>
+    <%= f.label :password, "Password:", :class => "input-box-label" %><br/>
+    <%= f.password_field :password, :class => "text-input-box" %>
+  </p>
+  <%= f.submit "Go!", :class => "site-button save-button" %>
+  <div class="error_messages">
+    <% if @user.errors.any? %>
+      <% for message in @user.errors.full_messages %>
+        <p class="login-error"> &bull; <%= message %></p>
+      <% end %>
+    <% end %>
+  <a href="/login">Already a user?</a>
+  </div>
+<% end %>
+</div>

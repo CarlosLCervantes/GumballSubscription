@@ -1,5 +1,19 @@
 Gumball::Application.routes.draw do
   root 'landing#index'
+
+  #user authentication
+  get "logout" => "sessions#destroy", :as => "log_out"
+  get "login" => "sessions#new", :as => "log_in"
+  get "signup" => "users#new", :as => "sign_up"
+  resources :sessions
+  resources :users
+
+  #user password reset
+  get "forgot_password" => "users#forgot_password"
+  post "reset_password" => "users#reset_password", :as => "reset_password"
+  get "edit_password" => "users#edit_password"
+  post "save_password" => "users#save_password", :as => "save_password"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

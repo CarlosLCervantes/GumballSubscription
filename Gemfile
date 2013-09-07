@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 #export PATH=$PATH:~/AWS/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
 
 gem 'rails', '4.0.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -9,7 +10,7 @@ gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.
 
 ####Active Admin####
 #gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
-#gem 'ransack'#,             github: 'ernie/ransack',         branch: 'rails-4'
+#gem 'ransack'#,            github: 'ernie/ransack',         branch: 'rails-4'
 #gem 'inherited_resources', github: 'josevalim/inherited_resources'
 #gem 'formtastic',          github: 'justinfrench/formtastic'
 ###########################
@@ -32,6 +33,10 @@ gem 'bourbon' #dependency of AA
 
 gem 'debugger', group: [:development, :test]
 gem 'rspec-rails', group: [:development, :test]
+
+#authentication
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 
 group :test do
 	gem 'capybara'
