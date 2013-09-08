@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top:$navbar-height;
+}
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+.navbar {
+	.nav {
+	  height: $navbar-height;
+	}
+	.nav > li > a {
+	 	padding: ($navbar-height - 20)/2 10px (($navbar-height - 20)/2 + 1);
+	 	font-family:'Oswald', sans-serif;
+	 	font-size:17px;
+	 	letter-spacing:1px;
+	}
+	.brand {
+		padding: ((($navbar-height - 20)/2) * 0.8) 20px ((($navbar-height - 20) / 2) * 1.2);
+	}
+}
+
+div.page-section {
+	height:100%;
+	width:100%;
+	&#page-one {
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
+		background-repeat:no-repeat;
+		background-size:100% auto;
+	}
+	&#page-two {
+		background-color:lightblue;
+	}
+}

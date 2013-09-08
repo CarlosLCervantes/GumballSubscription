@@ -24,9 +24,9 @@ gem 'coffee-rails', '~> 4.0.0'# Use CoffeeScript for .js.coffee assets and views
 gem 'jquery-rails' # Use jquery as the JavaScript library
 
 #### Twitter Bootstrap ####
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+#gem "therubyracer"
+#gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+#gem "twitter-bootstrap-rails"
 ###########################
 gem 'bourbon' #dependency of AA
 #gem 'asset_sync' #s3 asset sync

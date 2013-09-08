@@ -14,14 +14,7 @@
   </head>
   <body>
     <%= render "nav" %>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div id="main" class="span12">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
