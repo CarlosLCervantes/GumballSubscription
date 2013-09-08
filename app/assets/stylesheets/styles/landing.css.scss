@@ -29,12 +29,23 @@ body {
 div.page-section {
 	height:100%;
 	width:100%;
-	&#page-one {
+	overflow:none;
+	&#page-1 {
 		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
 		background-repeat:no-repeat;
 		background-size:100% auto;
 	}
-	&#page-two {
+	&#page-2 {
 		background-color:lightblue;
 	}
+	&#page-3 {
+		background-color:pink;
+	}
+	a:hover {
+		cursor:hand;
+		cursor:pointer;
+	}
+}
+.next-button {
+  position:absolute;
 }
