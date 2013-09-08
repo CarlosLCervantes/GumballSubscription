@@ -8,11 +8,17 @@ function resize_landing_page() {
   });
 }
 
-function move_to_page(a_page_number) {
+function move_to_page(a_page_number, a_animate) {
   current_page_number = a_page_number;
   var next_page = $("#page-" + current_page_number);
-  //$(window).scrollTop( next_page.offset().top-$("header").height() );
-  $("html, body").animate({scrollTop:next_page.offset().top-$("header").height()}, 300);
+
+  //animate is too slow for when window resizing, so it cant be used
+  if (typeof a_animate == 'undefined' || a_animate) {
+    $("html, body").animate({scrollTop:next_page.offset().top-$("header").height()}, 300);
+  } else {
+    $(window).scrollTop( next_page.offset().top-$("header").height() );
+  }
+  
   make_page_active(a_page_number);
 }
 
@@ -26,7 +32,7 @@ resize_landing_page();
 
 $(window).resize(function() {
   resize_landing_page();
-  move_to_page(current_page_number);
+  move_to_page(current_page_number, false);
 });
 
 $(window).scroll(function() {
