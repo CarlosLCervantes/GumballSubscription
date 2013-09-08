@@ -11,19 +11,17 @@ body {
 	margin:0px;
 }
 
+a:hover {
+	cursor:hand;
+	cursor:pointer;
+}
+
 .navbar {
-	.nav {
-	  height: $navbar-height;
-	}
 	.nav > li > a {
 	 	padding: ($navbar-height - 20)/2 10px (($navbar-height - 20)/2 + 1);
 	 	font-family:'Oswald', sans-serif;
 	 	font-size:17px;
 	 	letter-spacing:1px;
-	 	&:hover {
-	 		cursor:hand;
-			cursor:pointer;
-	 	}
 	}
 	.brand {
 		padding: ((($navbar-height - 20)/2) * 0.8) 20px ((($navbar-height - 20) / 2) * 1.2);
@@ -31,28 +29,44 @@ body {
 }
 
 div.page-section {
-	height:100%;
+	min-height:100%;
 	width:100%;
 	overflow:none;
 	&#page-1 {
 		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
-		background-repeat:no-repeat;
+		background-repeat:no-repeat center;
 		background-size:100% auto;
 	}
 	&#page-2 {
-		background-color:lightblue;
+		.inline-grid {
+			text-align:center;
+		}
+		.inline-grid > div {
+			margin: 0 auto;
+			display:inline-block;
+			padding-top:100px;
+			&:last-child {
+				padding-bottom:45px;
+			}
+		}
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
 	}
 	&#page-3 {
 		background-color:pink;
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/fashion-accessories-for-women.jpg');
+		background-repeat:no-repeat;
+		background-size: cover;
 	}
 	&#page-4 {
-		background-color:lightgreen;
-	}
-	a:hover {
-		cursor:hand;
-		cursor:pointer;
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
 	}
 }
 .next-button {
   position:absolute;
+}
+
+@media screen and (max-width: 875px) {
+  div.page-section#page-1 { 
+  	background-size: cover;
+  }
 }

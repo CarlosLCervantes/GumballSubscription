@@ -13,10 +13,11 @@ function move_to_page(a_page_number, a_animate) {
   var next_page = $("#page-" + current_page_number);
 
   //animate is too slow for when window resizing, so it cant be used
+  var scroll_top = next_page.offset().top-$("header").height();
   if (typeof a_animate == 'undefined' || a_animate) {
-    $("html, body").animate({scrollTop:next_page.offset().top-$("header").height()}, 300);
+    $("html, body").animate({scrollTop: scroll_top}, 300);
   } else {
-    $(window).scrollTop( next_page.offset().top-$("header").height() );
+    $(window).scrollTop( scroll_top );
   }
   
   make_page_active(a_page_number);
