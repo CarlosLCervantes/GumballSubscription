@@ -11,7 +11,8 @@ function resize_landing_page() {
 function move_to_page(a_page_number) {
   current_page_number = a_page_number;
   var next_page = $("#page-" + current_page_number);
-  $(window).scrollTop(next_page.offset().top-$("header").height());
+  //$(window).scrollTop( next_page.offset().top-$("header").height() );
+  $("html, body").animate({scrollTop:next_page.offset().top-$("header").height()}, 300);
   make_page_active(a_page_number);
 }
 
