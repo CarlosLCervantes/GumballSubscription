@@ -20,6 +20,10 @@ body {
 	 	font-family:'Oswald', sans-serif;
 	 	font-size:17px;
 	 	letter-spacing:1px;
+	 	&:hover {
+	 		cursor:hand;
+			cursor:pointer;
+	 	}
 	}
 	.brand {
 		padding: ((($navbar-height - 20)/2) * 0.8) 20px ((($navbar-height - 20) / 2) * 1.2);

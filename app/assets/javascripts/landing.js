@@ -1,5 +1,4 @@
 var current_page_number = 1;
-var scrolled_before_clicked_next = false;
 
 function resize_landing_page() {
   $.each($(".next-button"), function(index, button) {
@@ -13,7 +12,13 @@ function move_to_page(a_page_number) {
   current_page_number = a_page_number;
   var next_page = $("#page-" + current_page_number);
   $(window).scrollTop(next_page.offset().top-$("header").height());
-  scrolled_before_clicked_next = false;
+  make_page_active(a_page_number);
+}
+
+function make_page_active(a_page_number) {
+  current_page_number = a_page_number;
+  $("ul.nav>li").removeClass("active");
+  $("#header-page-"+a_page_number).addClass("active");
 }
 
 resize_landing_page();
@@ -24,13 +29,16 @@ $(window).resize(function() {
 });
 
 $(window).scroll(function() {
-  scrolled_before_clicked_next = true;
   $.each($(".page-section"), function(index, page) {
     if ( $(page).offset().top > $(window).scrollTop() )  {
-      current_page_number = $(page).data('page-number');
+      make_page_active($(page).data('page-number'));
       return false;
     }
   });
+});
+
+$(".header-page-link").click( function(event) {
+  move_to_page(parseInt($(this).parent().data('page-number')));
 });
 
 $(".next-button").click( function(event) {
