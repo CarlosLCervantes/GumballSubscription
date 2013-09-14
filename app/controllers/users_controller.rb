@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   def new_access
     email = params[:email].downcase
     @lead = Lead.new(email: email)
-    respond_to do |format|  
+
+    respond_to do |format|
+      @lead.save
       format.js #@lead
     end
   end

@@ -11,7 +11,8 @@
     </div>
   </div>
   <a id="page-one-next-button" class="next-button">
-    <img src="https://s3.amazonaws.com/gumball-assets/next_circle.png">
+    <%= get_image "next_circle.png" %>
+    <!--<img src="https://s3.amazonaws.com/gumball-assets/">-->
   </a>
 </div>
 <div id="page-2" class="page-section" data-page-number='2'>
@@ -19,15 +20,25 @@
     <%= get_image "next_circle.png" %>
     <!--<img src="https://s3.amazonaws.com/gumball-assets/">-->
   </a>
-  <div class="inline-grid">
+  <div id="banners" class="row">
+    <h1>HOW IT WORKS</h1>
     <div class='banner'>
+      <span class='glyphicon glyphicon-star'></span>
+      <p class='header'>Create Your Style</p>
+      <p class='desc'>Fill out a quick, fun survey by selecting your favorite styles, brands, and celebrity looks. This info is used by stylists to personally select items for you.</p>
       <%#= get_image "banner_basic.png" %>
+    </div>
+    <div class='banner middle'>
+      <%#= get_image "banner_basic.png" %>
+      <span class='glyphicon glyphicon-envelope'></span>
+      <p class='header'>Get Fabulous Items</p>
+      <p class='desc'>Choose your favorite accessory. Your package is shipped and always includes a fun mystery item. Keep everything as long as you want.</p>
     </div>
     <div class='banner'>
       <%#= get_image "banner_basic.png" %>
-    </div>
-    <div class='banner'>
-      <%#= get_image "banner_basic.png" %>
+      <span class='glyphicon glyphicon-refresh'></span>
+      <p class='header'>Repeat and Keep</p>
+      <p class='desc'>Ready for something new, use our pre-paid polybag to send everything back.  We take care of the cleaning and shipping. Love something?  Keep it at up to 50% off the retail price.</p>
     </div>
   </div>
 </div>
@@ -35,6 +46,21 @@
   <a id="page-three-next-button" class="next-button">
     <%= get_image "next_circle.png" %>
   </a>
+  <div id='pricing-row' class='row'>
+    <div class='col-md-6 col-md-offset-3'>
+      <h1>PRICING</h1>
+      <%= render "pricing/pricing_box" %>
+    </div>
+  </div>
 </div>
 <div id="page-4" class="page-section" data-page-number='4'>
+  <div id='brands-row' class='row'>
+    <div class='col-md-8 col-md-offset-2'>
+      <h1>BRANDS</h1>
+      <br />
+      <div class="row">
+        <%= get_image 'brands.png', :class => "col-md-12 col-xs-12" %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -8,9 +8,9 @@
         <span class="icon-bar"></span>
       </button>
       <div id="header-page-1" data-page-number="1">
-        <a class="header-page-link">
+        <%= link_to root_path, :class => "header-page-link" do %>
           <%= image_tag "logos/gumball_logo.png" %>
-        </a>
+        <% end %>
       </div>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
