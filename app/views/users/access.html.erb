@@ -1,0 +1,18 @@
+<div id='get-access-main'>
+	<h1>GET EARLY ACCESS</h1>
+	<div class='row'>
+		<div class='col-md-6 col-md-offset-3'>
+			<%= render "pricing/pricing_box" %>
+		</div>
+	</div>
+	<br /><br />
+	<div class='row'>
+		<div id='get-access' class='col-md-8 col-md-offset-2'>
+			<p>Reserve access to this amazing service today by giving us your email now</p>
+			<%= form_tag(new_user_access_path, remote: true) do %>
+				<%= text_field_tag "email", "", :placeholder => "ENTER EMAIL" %>
+				<button class='btn btn-red'>GET ACCESS</button>
+			<% end %>
+		</div>
+	</div>
+</div>

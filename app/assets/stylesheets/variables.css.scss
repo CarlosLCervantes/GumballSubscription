@@ -1,0 +1,31 @@
+$nav-bar-color: #333333;
+$navbar-height: 60px;
+$gumball-blue: #5BC9E0;
+$main-color: #52B5CA;
+$blue-color: #759BD3;
+$red-color: #EE5544;
+
+
+@mixin verala {
+	font-family: 'Varela Round', sans-serif;
+}
+
+@mixin oswald {
+	font-family: 'Oswald', 'Impact', 'Verdana';
+}
+
+@mixin open-sans {
+	font-family: 'Open Sans', 'Helvetica', 'Verdana';
+}
+
+
+/*SASS Mixin Example*/
+@mixin left($dist) {
+  float: left;
+  margin-left: $dist;
+}
+
+#data {
+  //@include left(10px);
+  @include verala;
+}

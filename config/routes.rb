@@ -9,6 +9,8 @@ Gumball::Application.routes.draw do
   resources :users
 
   #user password reset
+  get "access" => "users#access", :as => "user_access"
+  post "access" => "users#new_access", :as => "new_user_access"
   get "forgot_password" => "users#forgot_password"
   post "reset_password" => "users#reset_password", :as => "reset_password"
   get "edit_password" => "users#edit_password"

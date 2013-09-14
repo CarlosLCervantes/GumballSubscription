@@ -1,0 +1,31 @@
+# config/application.yml
+defaults: &defaults
+  domain: www.getgumball.com
+  remote_image_root: http://static.getgumball.com
+  use_remote_images: false
+  use_async_email: false
+  fb_app_id: 447820801944645
+  fb_secret: 8110b5e154116259bf3aca4f0d4ee2f7
+  send_emails: true
+  widget_js_file: http://www.getgumball.com/widget.main.js
+  monthly_sub_cost: 25
+  awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
+
+
+test:
+  <<: *defaults
+
+development:
+  <<: *defaults
+  domain: dev.getgumball.com
+  #remote_image_root: http://dev.getgumball.com/assets/
+  send_emails: true
+
+staging:
+  <<: *defaults
+  #domain: staging-gumball.herokuapp.com
+  domain: staging.getgumball.com
+  send_emails: false
+
+production:
+  <<: *defaults

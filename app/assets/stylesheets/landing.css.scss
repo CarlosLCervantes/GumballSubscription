@@ -1,0 +1,92 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top:$navbar-height;
+}
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+a:hover {
+	cursor:hand;
+	cursor:pointer;
+}
+
+div.page-section {
+	min-height:100%;
+	width:100%;
+	overflow:none;
+	&#page-1 {
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
+		background-repeat:no-repeat center;
+		background-size:100% auto;
+	}
+	&#page-2 {
+		.inline-grid {
+			text-align:center;
+		}
+		.inline-grid > div {
+			margin: 0 auto;
+			display:inline-block;
+			padding-top:100px;
+			&:last-child {
+				padding-bottom:45px;
+			}
+		}
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+	}
+	&#page-3 {
+		background-color:pink;
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/fashion-accessories-for-women.jpg');
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+	&#page-4 {
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+	}
+}
+.next-button {
+  position:absolute;
+}
+
+@media screen and (max-width: 875px) {
+  div.page-section#page-1 { 
+  	background-size: cover;
+  }
+}
+
+div#action-box {
+	padding-top: 15%;
+	padding-left: 50px;
+	hr {
+		width: 45%;
+		//height: 3px;
+		margin: 0px;
+	}
+	div#call-to-action-box {
+		@include verala;
+		max-width: 300px;
+		background-color: rgba(255,255,255,.5);
+		text-align: center;
+		p.get-started {
+			color: #222222;
+			font-size: 22px;
+		}
+		p.cost {
+			color: $main-color;
+			font-size: 18px;
+		}
+		em {
+			color: $main-color;
+			font-size: 14px;
+		}
+	}
+}
+/*How It Works*/
+div.banner {
+
+}

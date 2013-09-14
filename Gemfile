@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '1.9.3'
 #export PATH=$PATH:~/AWS/AWS-ElasticBeanstalk-CLI-2.5.1/eb/macosx/python2.7/
 
 gem 'rails', '4.0.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -9,14 +9,14 @@ gem 'turbolinks'# Turbolinks makes following links in your web application faste
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 ####Active Admin####
-#gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
-#gem 'ransack'#,            github: 'ernie/ransack',         branch: 'rails-4'
-#gem 'inherited_resources', github: 'josevalim/inherited_resources'
-#gem 'formtastic',          github: 'justinfrench/formtastic'
+gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
+gem 'ransack'#,            github: 'ernie/ransack',         branch: 'rails-4'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'formtastic',          github: 'justinfrench/formtastic'
 ###########################
-#gem 'kaminari' #dependency of AA
+gem 'kaminari' #dependency of AA
 #gem 'devise' #dependency of AA
-#gem 'settingslogic'
+gem 'settingslogic'
 
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets

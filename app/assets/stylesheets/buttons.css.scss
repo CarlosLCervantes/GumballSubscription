@@ -1,0 +1,33 @@
+.btn-teal {
+  background-color: $main-color !important;
+  background-image: none !important;
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-blue {
+	background-color: $blue-color !important;
+	background-image: none !important;
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-red {
+	background-color: $red-color !important;
+	background-image: none !important;
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-regular {
+  width: 120px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.btn {
+  @include verala
+}

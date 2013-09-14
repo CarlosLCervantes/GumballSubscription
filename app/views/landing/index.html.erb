@@ -1,31 +1,40 @@
 <div id="page-1" class="page-section" data-page-number='1'>
+  <div id="action-box" >
+    <h1>UNLIMITED</h1>
+    <hr />
+    <h2>fashion accessories<br />from top brands</h2>
+    <div id="call-to-action-box">
+        <p class='get-started'>Get Started Today</p>
+        <%= link_to "SIGN UP", user_access_path, :class => "btn btn-regular btn-teal" %>
+        <p class='cost'>Only $<%= Settings.monthly_sub_cost %> a Month</p>
+        <em>FREE shipping both ways</em>
+    </div>
+  </div>
   <a id="page-one-next-button" class="next-button">
     <img src="https://s3.amazonaws.com/gumball-assets/next_circle.png">
   </a>
 </div>
 <div id="page-2" class="page-section" data-page-number='2'>
   <a id="page-two-next-button" class="next-button">
-    <img src="https://s3.amazonaws.com/gumball-assets/next_circle.png">
+    <%= get_image "next_circle.png" %>
+    <!--<img src="https://s3.amazonaws.com/gumball-assets/">-->
   </a>
   <div class="inline-grid">
-    <div>
-      <img src="https://s3.amazonaws.com/gumball-assets/banner_basic.png">
+    <div class='banner'>
+      <%#= get_image "banner_basic.png" %>
     </div>
-    <div>
-      <img src="https://s3.amazonaws.com/gumball-assets/banner_basic.png">
+    <div class='banner'>
+      <%#= get_image "banner_basic.png" %>
     </div>
-    <div>
-      <img src="https://s3.amazonaws.com/gumball-assets/banner_basic.png">
+    <div class='banner'>
+      <%#= get_image "banner_basic.png" %>
     </div>
   </div>
 </div>
 <div id="page-3" class="page-section" data-page-number='3'>
   <a id="page-three-next-button" class="next-button">
-    <img src="https://s3.amazonaws.com/gumball-assets/next_circle.png">
+    <%= get_image "next_circle.png" %>
   </a>
 </div>
 <div id="page-4" class="page-section" data-page-number='4'>
 </div>
-
-<script type="text/javascript">
-</script>

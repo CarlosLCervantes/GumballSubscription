@@ -1,4 +1,18 @@
 class UsersController < ApplicationController
+   skip_before_filter :verify_authenticity_token, :only => [:new_access]
+
+  def access
+    
+  end
+
+  def new_access
+    email = params[:email].downcase
+    @lead = Lead.new(email: email)
+    respond_to do |format|  
+      format.js #@lead
+    end
+  end
+  
   def new
     @user = User.new
   end

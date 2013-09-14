@@ -1,0 +1,27 @@
+header {
+	margin-bottom: 0px !important;
+}
+.navbar {
+	.nav > li > a {
+	 	padding: ($navbar-height - 20)/2 10px (($navbar-height - 20)/2 + 1);
+	 	font-family:'Oswald', sans-serif;
+	 	font-size:17px;
+	 	letter-spacing:1px;
+	}
+	.brand {
+		padding: ((($navbar-height - 20)/2) * 0.8) 20px ((($navbar-height - 20) / 2) * 1.2);
+	}
+}
+
+ul#main-nav-items {
+	margin-left: 15px;
+}
+
+ul.navbar-right li {
+	padding-top: 10px;//($navbar-height - 20)/2 10px (($navbar-height - 20)/2 + 1)px;
+	margin-right: 10px;
+	a {
+		padding-top: 9px !important;
+	}
+}
+

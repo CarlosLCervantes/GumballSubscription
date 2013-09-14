@@ -1,0 +1,27 @@
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-theme";
+@import "buttons";
+@import "nav";
+@import "landing";
+@import "users";
+@import "pricing";
+
+body {
+	@incude open-sans;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Oswald, Impact, Verdana;
+	color: #fff;
+	text-shadow: 2px 1px 2px #000;
+	filter: dropshadow(color=#000, offx=2, offy=1);
+}
+
+h1 {
+	font-size: 80px;
+}
+
+h2 {
+	font-size: 45px;
+}
