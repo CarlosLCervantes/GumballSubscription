@@ -2,7 +2,7 @@ html, body {
   height: 100%;
 }
 
-body {
+html,body {
   padding-top:$navbar-height;
 }
 
@@ -16,6 +16,30 @@ a:hover {
 	cursor:pointer;
 }
 
+h1 {
+	font-family:'Oswald', sans-serif;
+	color:white;
+	margin:0px;
+	text-shadow: black 0.1em 0.1em 0.2em;
+ 	font-size:50px;
+ 	letter-spacing:1px;
+}
+
+h3 {
+	font-family:'Open Sans', sans-serif;
+	font-size:25px;
+	margin-top:2px;
+	color:$gumball-blue;
+}
+
+p.banner-text {
+	font-family:'Open Sans', sans-serif;
+	font-size:18px;
+	line-height:27px;
+	padding-left:17px;
+	text-align:left;
+}
+
 .navbar {
 	.nav > li > a {
 	 	padding: ($navbar-height - 20)/2 10px (($navbar-height - 20)/2 + 1);
@@ -26,29 +50,35 @@ a:hover {
 	.brand {
 		padding: ((($navbar-height - 20)/2) * 0.8) 20px ((($navbar-height - 20) / 2) * 1.2);
 	}
+	.logo-container {
+		padding: ($navbar-height - $gumball-logo-height)/2 0px ($navbar-height - $gumball-logo-height)/2 10px;
+		.logo-image {
+			height:$gumball-logo-height;
+		}
+	}
+	.vertical-header-bar {
+		float:left;
+		display:inline-block;
+		margin: 10px 50px 0px 50px;
+		height:40px;
+		width:2px;
+		background-color:#999;
+	}
 }
+
 
 div.page-section {
 	min-height:100%;
 	width:100%;
 	overflow:none;
+	text-align:center;
 	&#page-1 {
 		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
 		background-repeat:no-repeat center;
 		background-size:100% auto;
 	}
 	&#page-2 {
-		.inline-grid {
-			text-align:center;
-		}
-		.inline-grid > div {
-			margin: 0 auto;
-			display:inline-block;
-			padding-top:100px;
-			&:last-child {
-				padding-bottom:45px;
-			}
-		}
+		text-align:center;
 		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
 	}
 	&#page-3 {
@@ -59,10 +89,95 @@ div.page-section {
 	}
 	&#page-4 {
 		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+		.brands-image-container {
+			padding-top:40px;
+		}
 	}
 }
 .next-button {
   position:absolute;
+}
+
+.inline-grid {
+	width:100%;
+	padding-top:6%;
+	div.content-banner {
+		vertical-align:top;
+		height:359px;
+		width:306px;
+		display:inline-block;
+		margin:30px 0px 30px 0px;
+		background-image:image-url('https://s3.amazonaws.com/gumball-assets/banner_basic.png');
+		background-repeat:no-repeat center;
+		padding:50px 30px 50px 20px;
+	}
+}
+
+div#front-page-container {
+	width:320px;
+	text-align: left;
+	margin-left:5%;
+	padding-top:20%;
+	.front-page-tagline {
+		font-family:'Oswald', sans-serif;
+		border-top: 1px solid white;
+		padding: 10px 0px 10px 0px;
+		margin:10px 0px 0px 0px;
+		color:white;
+		font-size:35px;
+		font-weight:thin;
+		line-height:40px;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+}
+
+.outer-pricing-container {
+	padding-top:25px;
+	width:400px;
+	height:330px;
+	margin:0px auto;
+	.transparent-pricing-background {
+		background-color:$gumball-blue;
+		position:absolute;
+		width:400px;
+		height:330px;
+		opacity:0.6;
+	}
+
+	.inner-pricing-container {
+		position: relative;
+		top:25px;
+		left:25px;
+		background-color:#ddd;
+		width:350px;
+		height:280px;
+		ul.pricing-list {
+			li {
+				padding-bottom:10px;
+			}
+			padding:20px 0px 0px 20px;
+			list-style-type: none;
+			text-align:left;
+			font-family:'Oswald', sans-serif;
+			font-size:20px;
+			font-weight:bold;
+			.price-text {
+				color:$gumball-blue;
+				font-size:40px;
+				font-family:'Oswald', sans-serif;
+				text-align:center;
+				.price-text-month {
+					font-size:20px;
+				}
+			}
+		}
+	}
+}
+
+.icon-gumball-star {
+	font-size:24px;
+	padding-right:7px;
+	color:$gumball-blue
 }
 
 @media screen and (max-width: 875px) {

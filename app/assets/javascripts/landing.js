@@ -1,4 +1,4 @@
-var current_page_number = 1;
+var g_current_page_number = 1;
 
 function resize_landing_page() {
   $.each($(".next-button"), function(index, button) {
@@ -9,8 +9,8 @@ function resize_landing_page() {
 }
 
 function move_to_page(a_page_number, a_animate) {
-  current_page_number = a_page_number;
-  var next_page = $("#page-" + current_page_number);
+  g_current_page_number = a_page_number;
+  var next_page = $("#page-" + g_current_page_number);
 
   //animate is too slow for when window resizing, so it cant be used
   var scroll_top = next_page.offset().top-$("header").height();
@@ -24,7 +24,7 @@ function move_to_page(a_page_number, a_animate) {
 }
 
 function make_page_active(a_page_number) {
-  current_page_number = a_page_number;
+  g_current_page_number = a_page_number;
   $("ul.nav>li").removeClass("active");
   $("#header-page-"+a_page_number).addClass("active");
 }
@@ -33,12 +33,13 @@ resize_landing_page();
 
 $(window).resize(function() {
   resize_landing_page();
-  move_to_page(current_page_number, false);
+  //move_to_page(g_current_page_number, false);
 });
 
 $(window).scroll(function() {
   $.each($(".page-section"), function(index, page) {
-    if ( $(page).offset().top > $(window).scrollTop() )  {
+    if ( $(page).offset().top <= $(window).height()/2 + $(window).scrollTop() &&
+         $(page).offset().top >= $(window).scrollTop())  {
       make_page_active($(page).data('page-number'));
       return false;
     }
