@@ -9,6 +9,7 @@ gem 'turbolinks'# Turbolinks makes following links in your web application faste
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 ####Active Admin####
+#gem 'activeadmin'
 gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
 gem 'ransack'#,            github: 'ernie/ransack',         branch: 'rails-4'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
