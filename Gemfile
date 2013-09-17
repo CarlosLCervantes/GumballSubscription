@@ -33,12 +33,12 @@ gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'bourbon' #dependency of AA
 #gem 'asset_sync' #s3 asset sync
 
-gem 'debugger', group: [:development, :test]
-gem 'rspec-rails', group: [:development, :test]
-
 #authentication
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
+
+gem 'debugger', group: [:development, :test]
+gem 'rspec-rails', group: [:development, :test]
 
 group :test do
 	gem 'capybara'
@@ -49,6 +49,10 @@ end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :production do 
+	gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 end
 
 # Use unicorn as the app server
