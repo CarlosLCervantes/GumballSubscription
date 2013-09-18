@@ -3,12 +3,27 @@
 @import "bootstrap/bootstrap-theme";
 @import "buttons";
 @import "nav";
+@import "layout";
 @import "landing";
 @import "users";
 @import "pricing";
 
+html, body {
+  height: 100%;
+}
+
 body {
-	@include opensans;
+  padding-top:$navbar-height;
+  @include opensans;
+}
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+a:hover {
+	cursor:pointer;
 }
 
 h1, h2, h3, h4, h5 {
@@ -29,3 +44,4 @@ h2 {
 .clear {
 	clear: both;
 }
+

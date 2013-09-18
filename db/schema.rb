@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130914082907) do
+ActiveRecord::Schema.define(version: 20130917081426) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,9 +46,84 @@ ActiveRecord::Schema.define(version: 20130914082907) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "brands", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "colors", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "colors_items", id: false, force: true do |t|
+    t.integer "item_id"
+    t.integer "color_id"
+  end
+
+  add_index "colors_items", ["color_id", "item_id"], name: "index_colors_items_on_color_id_and_item_id", using: :btree
+  add_index "colors_items", ["item_id", "color_id"], name: "index_colors_items_on_item_id_and_color_id", using: :btree
+
+  create_table "item_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "name",                                                  null: false
+    t.string   "internal_name"
+    t.integer  "brand_id",                                              null: false
+    t.integer  "item_type_id",                                          null: false
+    t.decimal  "msrp",          precision: 10, scale: 0
+    t.decimal  "price",         precision: 10, scale: 0,                null: false
+    t.string   "img_1",                                                 null: false
+    t.string   "img_2"
+    t.string   "img_3"
+    t.string   "img_4"
+    t.text     "description",                                           null: false
+    t.text     "details"
+    t.text     "guide"
+    t.integer  "stock",                                  default: 0
+    t.boolean  "active",                                 default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items_occasions", id: false, force: true do |t|
+    t.integer "item_id"
+    t.integer "occasions_id"
+  end
+
+  add_index "items_occasions", ["item_id", "occasions_id"], name: "index_items_occasions_on_item_id_and_occasions_id", using: :btree
+  add_index "items_occasions", ["occasions_id", "item_id"], name: "index_items_occasions_on_occasions_id_and_item_id", using: :btree
+
+  create_table "items_styles", id: false, force: true do |t|
+    t.integer "item_id"
+    t.integer "style_id"
+  end
+
+  add_index "items_styles", ["item_id", "style_id"], name: "index_items_styles_on_item_id_and_style_id", using: :btree
+  add_index "items_styles", ["style_id", "item_id"], name: "index_items_styles_on_style_id_and_item_id", using: :btree
+
   create_table "leads", force: true do |t|
     t.string   "email"
     t.string   "device"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "occasions", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "styles", force: true do |t|
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

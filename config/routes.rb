@@ -9,10 +9,13 @@ Gumball::Application.routes.draw do
   get "signup" => "users#new", :as => "sign_up"
   resources :sessions
   resources :users
+  resources :items
 
-  #user password reset
+  #email capture
   get "access" => "users#access", :as => "user_access"
   post "access" => "users#new_access", :as => "new_user_access"
+
+  #user password reset
   get "forgot_password" => "users#forgot_password"
   post "reset_password" => "users#reset_password", :as => "reset_password"
   get "edit_password" => "users#edit_password"
