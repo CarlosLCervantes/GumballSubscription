@@ -12,4 +12,8 @@ class Item < ActiveRecord::Base
 	#style_id:integer, msrp:decimal, price:decimal, img_1:string, 
 	#img_2:string, img_3:string, img_4:string, description:text, 
 	#details:text, guide:text, stock:integer
+
+	def self.get_favorites_by_type(type_id)
+		Item.where(:item_type_id => type_id)
+	end
 end

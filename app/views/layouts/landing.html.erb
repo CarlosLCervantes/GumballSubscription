@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Landing Layout-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -8,10 +9,14 @@
     <%= csrf_meta_tags %>
     <%= render "shared/favicons" %>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Varela+Round|Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css"> 
+    <!-- Include js plugin -->
+    <!--<script src="assets/owl-carousel/owl.carousel.js"></script>-->
   </head>
   <body>
     <%= render "shared/nav" %>

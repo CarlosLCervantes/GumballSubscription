@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- App Layout-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -7,6 +8,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Gumball| Netflix for Fashion Accessories" %></title>
     <%= csrf_meta_tags %>
     <%= render "shared/favicons" %>
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Varela+Round|Open+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>

@@ -16,10 +16,10 @@ class AddItemJoinTables < ActiveRecord::Migration
     #########################
     create_table :items_occasions, :id => false do |t|
         t.references :item
-        t.references :occasions
+        t.references :occasion
     end
-    add_index :items_occasions, [:item_id, :occasions_id]
-    add_index :items_occasions, [:occasions_id, :item_id]
+    add_index :items_occasions, [:item_id, :occasion_id]
+    add_index :items_occasions, [:occasion_id, :item_id]
   end
 
   def self.down

@@ -1,5 +1,17 @@
 div#items-page {
-	background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+	background-image:image-url('http://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+	background-repeat:no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
+	margin-top: -15px;
+	padding: 15px;
+	color: #fff;
+	div.item-type-section {
+		div.header {
+			* {
+				display: inline-block;
+			}
+		}
+	}
 }

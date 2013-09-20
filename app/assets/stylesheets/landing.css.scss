@@ -9,7 +9,7 @@ div.page-section {
 		margin-bottom: 20px;
 	}
 	&#page-1 {
-		background-image:image-url('https://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
+		background-image:image-url('http://s3.amazonaws.com/gumball-assets/freedom_tiny.jpg');
 		background-repeat:no-repeat center;
 		background-size:100% auto;
 	}
@@ -25,17 +25,17 @@ div.page-section {
 				padding-bottom:45px;
 			}
 		}
-		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+		background-image:image-url('http://s3.amazonaws.com/gumball-assets/dimension_teal.png');
 	}
 	&#page-3 {
 		background-color:pink;
-		background-image:image-url('https://s3.amazonaws.com/gumball-assets/fashion-accessories-for-women.jpg');
+		background-image:image-url('http://s3.amazonaws.com/gumball-assets/fashion-accessories-for-women.jpg');
 		background-repeat:no-repeat;
 		background-size: cover;
 	}
 	&#page-4 {
 		min-height:80%;
-		background-image:image-url('https://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+		background-image:image-url('http://s3.amazonaws.com/gumball-assets/dimension_teal.png');
 
 	}
 }
@@ -89,7 +89,7 @@ div#banners {
 	max-width: 1020px;
 	margin: 0px auto;
 	div.banner {
-		background-image:image-url('https://s3.amazonaws.com/gumball-assets/banner_basic.png');
+		background-image:image-url('http://s3.amazonaws.com/gumball-assets/banner_basic.png');
 		background-repeat:no-repeat;
 		background-size: cover;
 		float: left;

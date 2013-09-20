@@ -95,11 +95,11 @@ ActiveRecord::Schema.define(version: 20130917081426) do
 
   create_table "items_occasions", id: false, force: true do |t|
     t.integer "item_id"
-    t.integer "occasions_id"
+    t.integer "occasion_id"
   end
 
-  add_index "items_occasions", ["item_id", "occasions_id"], name: "index_items_occasions_on_item_id_and_occasions_id", using: :btree
-  add_index "items_occasions", ["occasions_id", "item_id"], name: "index_items_occasions_on_occasions_id_and_item_id", using: :btree
+  add_index "items_occasions", ["item_id", "occasion_id"], name: "index_items_occasions_on_item_id_and_occasion_id", using: :btree
+  add_index "items_occasions", ["occasion_id", "item_id"], name: "index_items_occasions_on_occasion_id_and_item_id", using: :btree
 
   create_table "items_styles", id: false, force: true do |t|
     t.integer "item_id"
