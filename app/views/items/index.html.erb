@@ -4,15 +4,27 @@
   <div class="item-type-section">
   	<div class="header">
   		<h2>Watches</h2>
-  		<%= link_to "View All", "#" %>
+  		<%#= link_to "View All", "#" %>
   	</div>
-  	<div class="owl-carousel">
-  		<% Watch.get_favorites.each do |item| %>
-  			<div>
-  				<%= image_tag item.img_1 %>
-  				<p><%= item.name %></p>
-  			</div>
-  		<% end %>
+  	<div class="carousel-container">
+  		<div class='left-button carousel-button'>
+  			<span class='glyphicon glyphicon-chevron-left'></span>
+  		</div>
+	  	<div class="owl-carousel">
+	  		<% Watch.get_favorites.each do |item| %>
+	  			<div class='item'>
+	  				<%= link_to "I Want It", "#", :class => "btn btn-teal i-want-it", :data => {:id => item.id, :url => orders_path} %>
+	  				<div class='details-icon'>Details</div>
+	  				<%= link_to item_path(item) do %>
+	  					<%= image_tag item.img_1 %>
+	  				<% end %>
+	  				<p><%= item.name %></p>
+	  			</div>
+	  		<% end %>
+	  	</div>
+	  	<div class='right-button carousel-button'>
+	  		<span class='glyphicon glyphicon-chevron-right'></span>
+	  	</div>
   	</div>
   </div>
 </div>

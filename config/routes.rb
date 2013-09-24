@@ -1,4 +1,6 @@
 Gumball::Application.routes.draw do
+  resources :orders
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'landing#index'
@@ -10,6 +12,7 @@ Gumball::Application.routes.draw do
   resources :sessions
   resources :users
   resources :items
+  resources :dashboard
 
   #email capture
   get "access" => "users#access", :as => "user_access"

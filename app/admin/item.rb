@@ -16,11 +16,11 @@ ActiveAdmin.register Item do
     end
 
     f.inputs :name => "Classification" do
-      f.input :item_type_id, :as => :select, :collection => ItemType.all
+      f.input :item_type_id, :as => :select, :collection => ItemType.get_types
       f.input :brand_id, :as => :select, :collection => Brand.all
       f.input :colors, :as => :check_boxes, :collection => Color.all
-      f.input :occasions, :as => :check_boxes, :collection => Color.all
-      f.input :styles, :as => :check_boxes, :collection => Color.all
+      f.input :occasions, :as => :check_boxes, :collection => Occasion.all
+      f.input :styles, :as => :check_boxes, :collection => Style.all
     end
 
     f.inputs :name => "Details" do

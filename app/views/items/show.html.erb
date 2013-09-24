@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<div id="item-page">
+	<h1><%= @item.name %></h1>
+	<div class="row">
+		<div class="col-md-4">
+			<span>Style</span>
+		</div>
+		<div class="col-md-4">
+			<span>Color</span>
+		</div>
+		<div class="col-md-4">
+			<span>Occassion</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 content">
+			<%= image_tag @item.img_1 %>
+		</div>
+		<div class="col-lg-5 content">
+			<span>Description</span>
+			<p><%= @item.description %></p>
+			<span>How to Wear</span>
+			<p><%= @item.guide %></p>
+			<span>Details</span>
+			<p><%= @item.details %></p>
+		</div>
+	</div>
+	<%= link_to "<< Back to Items List", items_path %>
+</div>

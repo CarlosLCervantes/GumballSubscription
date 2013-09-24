@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917081426) do
+ActiveRecord::Schema.define(version: 20130921074631) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -121,6 +121,20 @@ ActiveRecord::Schema.define(version: 20130917081426) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "orders", force: true do |t|
+    t.integer  "user_id",                                  null: false
+    t.integer  "item_id",                                  null: false
+    t.datetime "shiped_date"
+    t.datetime "est_ship_date"
+    t.decimal  "ship_cost",       precision: 10, scale: 0
+    t.string   "tracking_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "orders", ["item_id"], name: "index_orders_on_item_id", using: :btree
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
   create_table "styles", force: true do |t|
     t.string   "name",       null: false

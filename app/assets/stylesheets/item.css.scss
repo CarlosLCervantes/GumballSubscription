@@ -1,0 +1,20 @@
+div#item-page {
+	background-color: #fff;
+	background-image:image-url('http://s3.amazonaws.com/gumball-assets/dimension_teal.png');
+	margin-top: -15px;
+	padding: 15px;
+	height: 100%;
+	div.content {
+		@include box;
+		background-color: #ffffff;
+		span {
+			@include verala;
+			font-size: 19px;
+			color: $main-color;
+		}
+		p {
+			color: $dark-color;
+			font-size: 16px;
+		}
+	}
+}

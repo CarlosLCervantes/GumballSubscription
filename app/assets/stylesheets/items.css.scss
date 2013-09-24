@@ -1,7 +1,8 @@
 div#items-page {
+	background-color: #fff;
 	background-image:image-url('http://s3.amazonaws.com/gumball-assets/dimension_teal.png');
-	background-repeat:no-repeat;
-	background-size: cover;
+	// background-repeat:no-repeat;
+	// background-size: cover;
 	width: 100%;
 	height: 100%;
 	margin-top: -15px;
@@ -12,6 +13,84 @@ div#items-page {
 			* {
 				display: inline-block;
 			}
+			a {
+				color: $main-color;
+				margin-left: 10px;
+				font-size: 16px;
+				text-decoration: underline;
+				font-weight: bold;
+			}
 		}
+	}
+}
+
+div.carousel-container {
+	position: relative;
+	.left-button, .right-button {
+		display: none;
+		background-color: rgba(22,22,22, .8);
+		width: 7%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 3;
+		span {
+			font-size: 5vw;
+			margin-top: 75%;
+			vertical-align: middle;
+		}
+		cursor: pointer;
+	}
+	.left-button {
+		left: 0;
+	}
+	.right-button {
+		right: 0;
+	}
+}
+
+div.item {
+	&:first-child {
+		margin-left: 0px;
+	}
+	&:last-child {
+		margin-right: 0px;
+	}
+	@include verala;
+	@include box;
+	font-family: 'Varela Round', sans-serif !important;
+	position: relative;
+	cursor: pointer;
+	img {
+		width: 100%;
+	}
+	p {
+		position: absolute;
+		background-color: rgba(25,25,25, .85);
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		margin: 0px;
+		padding: 10px 0px;
+	}
+	a.i-want-it {
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		display:none;
+	}
+	div.details-icon {
+		font-size: 18px;
+		border-radius: 20px;
+		background-color: rgba(119, 154, 216, .7);
+		padding: 15px 30px;
+		position: absolute;
+		top: 43%;
+		left: 40%;
+		display:none;
 	}
 }

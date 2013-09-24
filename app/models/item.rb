@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
 	has_and_belongs_to_many :occasions
 	has_and_belongs_to_many :styles
 	belongs_to :brand
-	belongs_to :item_type
+	#belongs_to :item_type
 
 	accepts_nested_attributes_for :colors, :occasions, :styles
 

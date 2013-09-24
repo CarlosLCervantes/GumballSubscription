@@ -5,7 +5,7 @@
     <h2>fashion accessories<br />from top brands</h2>
     <div id="call-to-action-box">
         <p class='get-started'>Get Started Today</p>
-        <%= link_to "SIGN UP", user_access_path, :class => "btn btn-regular btn-teal" %>
+        <%= link_to "SIGN UP", @sign_up_path, :class => "btn btn-regular btn-teal" %>
         <p class='cost'>Only $<%= Settings.monthly_sub_cost %> a Month</p>
         <em>FREE shipping both ways</em>
     </div>
@@ -15,7 +15,8 @@
     <!--<img src="https://s3.amazonaws.com/gumball-assets/">-->
   </a>
 </div>
-<div id="page-2" class="page-section" data-page-number='2'>
+<div id="page-2" name="howitworks" class="page-section" data-page-number='2'>
+  <a name="howitworks"></a>
   <a id="page-two-next-button" class="next-button">
     <%= get_image "next_circle.png" %>
     <!--<img src="https://s3.amazonaws.com/gumball-assets/">-->
@@ -42,7 +43,8 @@
     </div>
   </div>
 </div>
-<div id="page-3" class="page-section" data-page-number='3'>
+<div id="page-3" name="pricing" class="page-section" data-page-number='3'>
+  <a name="pricing"></a>
   <a id="page-three-next-button" class="next-button">
     <%= get_image "next_circle.png" %>
   </a>
@@ -53,7 +55,8 @@
     </div>
   </div>
 </div>
-<div id="page-4" class="page-section" data-page-number='4'>
+<div id="page-4" name="brands" class="page-section" data-page-number='4'>
+  <a name="brands"></a>
   <div id='brands-row' class='row'>
     <div class='col-md-8 col-md-offset-2'>
       <h1>BRANDS</h1>

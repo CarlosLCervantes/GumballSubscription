@@ -4,6 +4,7 @@ $gumball-blue: #5BC9E0;
 $main-color: #52B5CA;
 $blue-color: #759BD3;
 $red-color: #EE5544;
+$dark-color: #444444;
 
 
 @mixin verala {
@@ -16,6 +17,12 @@ $red-color: #EE5544;
 
 @mixin opensans {
 	font-family: 'Open Sans', 'Helvetica', 'Verdana';
+}
+
+@mixin box {
+	border-radius: 5px;
+	border: 3px solid $main-color;
+	margin: 0px 20px;
 }
 
 
